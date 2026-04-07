@@ -5,14 +5,11 @@ using Avalonia.Markup.Xaml;
 
 namespace Demo
 {
-    public class MainWindow : Window, INotifyPropertyChanged
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
         public MainWindow()
         {
             InitializeComponent();
-#if DEBUG
-            this.AttachDevTools();
-#endif
             DataContext = new DemoViewModel();
         }
 

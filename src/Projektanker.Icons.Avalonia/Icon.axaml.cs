@@ -7,7 +7,7 @@ using Avalonia.Media;
 
 namespace Projektanker.Icons.Avalonia
 {
-    public class Icon : TemplatedControl
+    public partial class Icon : TemplatedControl
     {
         public static readonly StyledProperty<string> ValueProperty = AvaloniaProperty.Register<
             Icon,

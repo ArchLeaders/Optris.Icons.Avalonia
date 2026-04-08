@@ -11,6 +11,8 @@
 A library to easily display icons in an Avalonia App.
 
 [![🧪 Test](https://github.com/Optris/Optris.Icons.Avalonia/actions/workflows/push.yml/badge.svg)](https://github.com/Optris/Optris.Icons.Avalonia/actions/workflows/push.yml)
+[![🔄 Sync FontAwesome](https://github.com/Optris/Optris.Icons.Avalonia/actions/workflows/sync-fontawesome.yml/badge.svg)](https://github.com/Optris/Optris.Icons.Avalonia/actions/workflows/sync-fontawesome.yml)
+[![🔄 Sync Material Design](https://github.com/Optris/Optris.Icons.Avalonia/actions/workflows/sync-materialdesign.yml/badge.svg)](https://github.com/Optris/Optris.Icons.Avalonia/actions/workflows/sync-materialdesign.yml)
 
 ## NuGet
 

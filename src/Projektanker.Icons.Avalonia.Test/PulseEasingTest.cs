@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using Xunit;
 
-namespace Projektanker.Icons.Avalonia.Test
+namespace Optris.Icons.Avalonia.Test
 {
     public class PulseEasingTest
     {

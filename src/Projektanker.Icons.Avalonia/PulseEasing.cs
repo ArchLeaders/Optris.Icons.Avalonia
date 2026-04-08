@@ -2,7 +2,7 @@
 using System.Linq;
 using Avalonia.Animation.Easings;
 
-namespace Projektanker.Icons.Avalonia
+namespace Optris.Icons.Avalonia
 {
     public class PulseEasing : Easing
     {

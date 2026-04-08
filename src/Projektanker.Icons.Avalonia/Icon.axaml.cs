@@ -5,7 +5,7 @@ using Avalonia.Media;
 
 #nullable enable
 
-namespace Projektanker.Icons.Avalonia
+namespace Optris.Icons.Avalonia
 {
     public partial class Icon : TemplatedControl
     {

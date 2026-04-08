@@ -1,4 +1,4 @@
-﻿namespace Projektanker.Icons.Avalonia.FontAwesome.Models
+﻿namespace Optris.Icons.Avalonia.FontAwesome.Models
 {
     internal enum Style
     {

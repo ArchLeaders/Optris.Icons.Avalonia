@@ -5,7 +5,7 @@ using Avalonia.Media.Immutable;
 
 #nullable enable
 
-namespace Projektanker.Icons.Avalonia
+namespace Optris.Icons.Avalonia
 {
     public class IconImage : DrawingImage, IImage
     {

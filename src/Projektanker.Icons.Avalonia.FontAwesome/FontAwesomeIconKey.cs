@@ -1,7 +1,7 @@
 ﻿using System;
-using Projektanker.Icons.Avalonia.FontAwesome.Models;
+using Optris.Icons.Avalonia.FontAwesome.Models;
 
-namespace Projektanker.Icons.Avalonia.FontAwesome
+namespace Optris.Icons.Avalonia.FontAwesome
 {
     internal partial class FontAwesomeIconKey
     {

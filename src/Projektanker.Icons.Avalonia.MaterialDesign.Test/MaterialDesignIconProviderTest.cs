@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using FluentAssertions;
-using Projektanker.Icons.Avalonia.Models;
+using Optris.Icons.Avalonia.Models;
 using SkiaSharp;
 using Xunit;
 
-namespace Projektanker.Icons.Avalonia.MaterialDesign.Test
+namespace Optris.Icons.Avalonia.MaterialDesign.Test
 {
     public class MaterialDesignIconProviderTest
     {

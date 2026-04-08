@@ -1,7 +1,7 @@
 ﻿using Avalonia;
-using Projektanker.Icons.Avalonia;
-using Projektanker.Icons.Avalonia.FontAwesome;
-using Projektanker.Icons.Avalonia.MaterialDesign;
+using Optris.Icons.Avalonia;
+using Optris.Icons.Avalonia.FontAwesome;
+using Optris.Icons.Avalonia.MaterialDesign;
 
 namespace Demo
 {

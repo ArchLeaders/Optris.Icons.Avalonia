@@ -1,4 +1,4 @@
-﻿namespace Projektanker.Icons.Avalonia
+﻿namespace Optris.Icons.Avalonia
 {
     public enum IconAnimation
     {

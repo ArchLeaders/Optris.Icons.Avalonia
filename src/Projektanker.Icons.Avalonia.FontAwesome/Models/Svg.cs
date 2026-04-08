@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Projektanker.Icons.Avalonia.Models;
+using Optris.Icons.Avalonia.Models;
 
-namespace Projektanker.Icons.Avalonia.FontAwesome.Models
+namespace Optris.Icons.Avalonia.FontAwesome.Models
 {
     internal class Svg
     {

@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using FluentAssertions;
 using NSubstitute;
-using Projektanker.Icons.Avalonia.Models;
+using Optris.Icons.Avalonia.Models;
 using Xunit;
 
-namespace Projektanker.Icons.Avalonia.Test
+namespace Optris.Icons.Avalonia.Test
 {
     public class IconProviderTest
     {

@@ -1,4 +1,4 @@
-﻿namespace Projektanker.Icons.Avalonia.Models
+﻿namespace Optris.Icons.Avalonia.Models
 {
     public readonly record struct PathModel
     {

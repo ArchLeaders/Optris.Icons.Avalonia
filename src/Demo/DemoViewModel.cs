@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System;
 using System.ComponentModel;
-using Projektanker.Icons.Avalonia;
+using Optris.Icons.Avalonia;
 
 namespace Demo;
 

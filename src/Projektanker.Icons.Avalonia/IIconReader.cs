@@ -1,6 +1,6 @@
-﻿using Projektanker.Icons.Avalonia.Models;
+﻿using Optris.Icons.Avalonia.Models;
 
-namespace Projektanker.Icons.Avalonia
+namespace Optris.Icons.Avalonia
 {
     /// <summary>
     /// Represents an icon reader.

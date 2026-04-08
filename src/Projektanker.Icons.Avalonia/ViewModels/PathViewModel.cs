@@ -1,6 +1,6 @@
 ﻿using Avalonia.Media;
 
-namespace Projektanker.Icons.Avalonia.ViewModels
+namespace Optris.Icons.Avalonia.ViewModels
 {
     internal class PathViewModel
     {

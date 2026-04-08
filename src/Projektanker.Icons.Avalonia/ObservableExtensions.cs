@@ -1,7 +1,7 @@
 ﻿using System;
 using Avalonia.Reactive;
 
-namespace Projektanker.Icons.Avalonia
+namespace Optris.Icons.Avalonia
 {
     public static class ObservableExtensions
     {

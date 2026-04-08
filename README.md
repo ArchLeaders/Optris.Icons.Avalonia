@@ -10,17 +10,15 @@
 
 A library to easily display icons in an Avalonia App.
 
-[![🚀 Push](https://github.com/Projektanker/Icons.Avalonia/actions/workflows/push.yml/badge.svg)](https://github.com/Projektanker/Icons.Avalonia/actions/workflows/push.yml)
-[![🔄 Sync Fontawesome](https://github.com/Projektanker/Icons.Avalonia/actions/workflows/sync-fontawesome.yml/badge.svg)](https://github.com/Projektanker/Icons.Avalonia/actions/workflows/sync-fontawesome.yml)
-[![🔄 Sync Material Design](https://github.com/Projektanker/Icons.Avalonia/actions/workflows/sync-materialdesign.yml/badge.svg)](https://github.com/Projektanker/Icons.Avalonia/actions/workflows/sync-materialdesign.yml)
+[![🧪 Test](https://github.com/Optris/Optris.Icons.Avalonia/actions/workflows/push.yml/badge.svg)](https://github.com/Optris/Optris.Icons.Avalonia/actions/workflows/push.yml)
 
 ## NuGet
 
-| Name                                                                                                                     | Description                                                     | Version                                                                         |
-| :----------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------- | :------------------------------------------------------------------------------ |
-| [Projektanker.Icons.Avalonia](https://www.nuget.org/packages/Projektanker.Icons.Avalonia/)                               | Core library                                                    | ![Nuget](https://badgen.net/nuget/v/Projektanker.Icons.Avalonia)                |
-| [Projektanker.Icons.Avalonia.FontAwesome](https://www.nuget.org/packages/Projektanker.Icons.Avalonia.FontAwesome/)       | [Font Awesome 6 Free](https://fontawesome.com)                  | ![Nuget](https://badgen.net/nuget/v/Projektanker.Icons.Avalonia.FontAwesome)    |
-| [Projektanker.Icons.Avalonia.MaterialDesign](https://www.nuget.org/packages/Projektanker.Icons.Avalonia.MaterialDesign/) | [Material Design Icons](https://pictogrammers.com/library/mdi/) | ![Nuget](https://badgen.net/nuget/v/Projektanker.Icons.Avalonia.MaterialDesign) |
+| Name                                                                                                                  | Description                                                     | Version                                                                      |
+| :-------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------- | :--------------------------------------------------------------------------- |
+| [Optris.Icons.Avalonia](https://www.nuget.org/packages/Optris.Icons.Avalonia/)                                        | Core library                                                    | ![Nuget](https://badgen.net/nuget/v/Optris.Icons.Avalonia)                  |
+| [Optris.Icons.Avalonia.FontAwesome](https://www.nuget.org/packages/Optris.Icons.Avalonia.FontAwesome/)                | [Font Awesome 6 Free](https://fontawesome.com)                  | ![Nuget](https://badgen.net/nuget/v/Optris.Icons.Avalonia.FontAwesome)      |
+| [Optris.Icons.Avalonia.MaterialDesign](https://www.nuget.org/packages/Optris.Icons.Avalonia.MaterialDesign/)          | [Material Design Icons](https://pictogrammers.com/library/mdi/) | ![Nuget](https://badgen.net/nuget/v/Optris.Icons.Avalonia.MaterialDesign)   |
 
 ## Icon providers
 
@@ -119,7 +117,7 @@ Add `xmlns:i="https://github.com/projektanker/icons.avalonia"` to your view.
 Just implement the `IIconProvider` interface:
 
 ```csharp
-namespace Projektanker.Icons.Avalonia
+namespace Optris.Icons.Avalonia
 {
     /// <summary>
     /// Represents an icon reader.

@@ -3,6 +3,8 @@
 		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		xmlns:i="https://github.com/projektanker/icons.avalonia"
+		xmlns:vm="clr-namespace:Demo"
+		x:DataType="vm:DemoViewModel"
 		mc:Ignorable="d" x:Class="Demo.MainWindow"
 		SizeToContent="WidthAndHeight"
 		Title="Demo">

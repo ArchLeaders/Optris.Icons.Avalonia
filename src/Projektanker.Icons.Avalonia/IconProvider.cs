@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Projektanker.Icons.Avalonia.Models;
+using Optris.Icons.Avalonia.Models;
 
-namespace Projektanker.Icons.Avalonia
+namespace Optris.Icons.Avalonia
 {
     /// <summary>
     /// Class providing the icon paths.

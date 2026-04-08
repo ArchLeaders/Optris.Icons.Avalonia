@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Projektanker.Icons.Avalonia
+namespace Optris.Icons.Avalonia
 {
     public interface IIconProviderContainer
     {

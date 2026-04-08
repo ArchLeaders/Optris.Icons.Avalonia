@@ -1,7 +1,7 @@
 ﻿using Avalonia;
 using AvaloniaMenuItem = Avalonia.Controls.MenuItem;
 
-namespace Projektanker.Icons.Avalonia
+namespace Optris.Icons.Avalonia
 {
     public static class MenuItem
     {

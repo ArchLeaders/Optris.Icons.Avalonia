@@ -1,4 +1,4 @@
-﻿namespace Projektanker.Icons.Avalonia.Models
+﻿namespace Optris.Icons.Avalonia.Models
 {
     public record ViewBoxModel(int X, int Y, int Width, int Height)
     {

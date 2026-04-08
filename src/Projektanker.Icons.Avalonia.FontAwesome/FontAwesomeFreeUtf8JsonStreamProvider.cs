@@ -1,7 +1,7 @@
 using System.IO;
 using System.Reflection;
 
-namespace Projektanker.Icons.Avalonia.FontAwesome;
+namespace Optris.Icons.Avalonia.FontAwesome;
 
 public sealed class FontAwesomeFreeUtf8JsonStreamProvider : IFontAwesomeUtf8JsonStreamProvider
 {

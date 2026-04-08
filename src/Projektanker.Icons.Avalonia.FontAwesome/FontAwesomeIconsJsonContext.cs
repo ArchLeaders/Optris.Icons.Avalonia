@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Text.Json.Serialization;
-using Projektanker.Icons.Avalonia.FontAwesome.Models;
+using Optris.Icons.Avalonia.FontAwesome.Models;
 
-namespace Projektanker.Icons.Avalonia.FontAwesome
+namespace Optris.Icons.Avalonia.FontAwesome
 {
     [JsonSourceGenerationOptions(PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase)]
     [JsonSerializable(typeof(Dictionary<string, FontAwesomeIcon>))]

@@ -5,9 +5,9 @@ using Avalonia.Media;
 
 #nullable enable
 
-namespace Projektanker.Icons.Avalonia
+namespace Optris.Icons.Avalonia
 {
-    public class Icon : TemplatedControl
+    public partial class Icon : TemplatedControl
     {
         public static readonly StyledProperty<string> ValueProperty = AvaloniaProperty.Register<
             Icon,

@@ -2,9 +2,9 @@
 using System.IO;
 using System.Reflection;
 using System.Text.RegularExpressions;
-using Projektanker.Icons.Avalonia.Models;
+using Optris.Icons.Avalonia.Models;
 
-namespace Projektanker.Icons.Avalonia.MaterialDesign
+namespace Optris.Icons.Avalonia.MaterialDesign
 {
     /// <summary>
     /// Implements the <see cref="IIconProvider"/> interface to provide Material Design icons.

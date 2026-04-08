@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using FluentAssertions;
-using Projektanker.Icons.Avalonia.Models;
+using Optris.Icons.Avalonia.Models;
 using SkiaSharp;
 using Xunit;
 
-namespace Projektanker.Icons.Avalonia.FontAwesome.Test;
+namespace Optris.Icons.Avalonia.FontAwesome.Test;
 
 public class FontAwesomeIconProviderTest
 {

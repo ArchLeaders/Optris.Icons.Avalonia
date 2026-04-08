@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
-using Projektanker.Icons.Avalonia.FontAwesome.Models;
-using Projektanker.Icons.Avalonia.Models;
+using Optris.Icons.Avalonia.FontAwesome.Models;
+using Optris.Icons.Avalonia.Models;
 
-namespace Projektanker.Icons.Avalonia.FontAwesome;
+namespace Optris.Icons.Avalonia.FontAwesome;
 
 /// <summary>
 /// Implements the <see cref="IIconProvider"/> interface to provide font-awesome icons.

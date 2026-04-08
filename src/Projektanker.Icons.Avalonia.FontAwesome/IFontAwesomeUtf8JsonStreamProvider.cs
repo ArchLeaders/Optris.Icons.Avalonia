@@ -1,6 +1,6 @@
 using System.IO;
 
-namespace Projektanker.Icons.Avalonia.FontAwesome;
+namespace Optris.Icons.Avalonia.FontAwesome;
 
 /// <summary>
 /// Provides an UTF-8 encoded JSON stream to deserialize the icon collection from.

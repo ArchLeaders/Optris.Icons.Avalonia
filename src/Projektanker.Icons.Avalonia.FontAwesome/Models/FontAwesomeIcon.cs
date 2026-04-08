@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Projektanker.Icons.Avalonia.FontAwesome.Models
+namespace Optris.Icons.Avalonia.FontAwesome.Models
 {
     internal class FontAwesomeIcon
     {

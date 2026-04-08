@@ -1,4 +1,4 @@
-﻿namespace Projektanker.Icons.Avalonia.Models
+﻿namespace Optris.Icons.Avalonia.Models
 {
     public record IconModel(ViewBoxModel ViewBox, PathModel Path);
 }

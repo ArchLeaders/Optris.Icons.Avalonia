@@ -11,6 +11,11 @@ namespace Optris.Icons.Avalonia
     /// </summary>
     public class IconProvider : IIconReader, IIconProviderContainer
     {
+#if NET9_0_OR_GREATER
+        private readonly System.Threading.Lock _lock = new();
+#else
+        private readonly object _lock = new();
+#endif
         private readonly List<IIconProvider> _iconProviders = new();
         public static IconProvider Current { get; } = new IconProvider();
 
@@ -22,8 +27,12 @@ namespace Optris.Icons.Avalonia
                 return new IconModel(new ViewBoxModel(0, 0, 0, 0), new PathModel(string.Empty));
             }
 
-            var provider = _iconProviders
-                .FirstOrDefault(p => value.StartsWith(p.Prefix, StringComparison.OrdinalIgnoreCase));
+            IIconProvider provider;
+            lock (_lock)
+            {
+                provider = _iconProviders
+                    .FirstOrDefault(p => value.StartsWith(p.Prefix, StringComparison.OrdinalIgnoreCase));
+            }
 
             if (provider is null)
             {
@@ -47,14 +56,18 @@ namespace Optris.Icons.Avalonia
                 throw new ArgumentNullException(nameof(iconProvider));
             }
 
-            var conflicting = _iconProviders
-                .FirstOrDefault(existing => IsPrefix(existing.Prefix, iconProvider.Prefix));
-            if (conflicting != null)
+            lock (_lock)
             {
-                throw new ArgumentException($"Prefix \"{iconProvider.Prefix}\" conflicts with existing icon provider prefix \"{conflicting.Prefix}\".");
+                var conflicting = _iconProviders
+                    .FirstOrDefault(existing => IsPrefix(existing.Prefix, iconProvider.Prefix));
+                if (conflicting != null)
+                {
+                    throw new ArgumentException($"Prefix \"{iconProvider.Prefix}\" conflicts with existing icon provider prefix \"{conflicting.Prefix}\".");
+                }
+
+                _iconProviders.Add(iconProvider);
             }
 
-            _iconProviders.Add(iconProvider);
             return this;
         }
 

@@ -31,7 +31,7 @@ public class IconProvider : IIconReader, IIconProviderContainer
         lock (_lock)
         {
             provider = _iconProviders
-                .FirstOrDefault(p => value.StartsWith(p.Prefix, StringComparison.OrdinalIgnoreCase));
+                .FirstOrDefault(p => value.StartsWith(p.Prefix + "-", StringComparison.OrdinalIgnoreCase));
         }
 
         if (provider is null)
@@ -80,7 +80,6 @@ public class IconProvider : IIconReader, IIconProviderContainer
 
     private static bool IsPrefix(string existing, string adding)
     {
-        return existing.StartsWith(adding, StringComparison.OrdinalIgnoreCase)
-            || adding.StartsWith(existing, StringComparison.OrdinalIgnoreCase);
+        return string.Equals(existing, adding, StringComparison.OrdinalIgnoreCase);
     }
 }

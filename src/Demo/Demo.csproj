@@ -12,6 +12,7 @@
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\Optris.Icons.Avalonia.FontAwesome\Optris.Icons.Avalonia.FontAwesome.csproj" />
+        <ProjectReference Include="..\Optris.Icons.Avalonia.FontAwesome7\Optris.Icons.Avalonia.FontAwesome7.csproj" />
         <ProjectReference Include="..\Optris.Icons.Avalonia.MaterialDesign\Optris.Icons.Avalonia.MaterialDesign.csproj" />
     </ItemGroup>
 </Project>

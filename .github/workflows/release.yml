@@ -37,6 +37,7 @@ jobs:
         run: |
           dotnet pack Optris.Icons.Avalonia/Optris.Icons.Avalonia.csproj -c Release -o ../artifacts -p:Version=${{ steps.version.outputs.value }}
           dotnet pack Optris.Icons.Avalonia.FontAwesome/Optris.Icons.Avalonia.FontAwesome.csproj -c Release -o ../artifacts -p:Version=${{ steps.version.outputs.value }}
+          dotnet pack Optris.Icons.Avalonia.FontAwesome7/Optris.Icons.Avalonia.FontAwesome7.csproj -c Release -o ../artifacts -p:Version=${{ steps.version.outputs.value }}
           dotnet pack Optris.Icons.Avalonia.MaterialDesign/Optris.Icons.Avalonia.MaterialDesign.csproj -c Release -o ../artifacts -p:Version=${{ steps.version.outputs.value }}
 
       - name: Push to NuGet

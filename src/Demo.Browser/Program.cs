@@ -5,6 +5,7 @@ using Avalonia.Browser;
 using Demo;
 using Optris.Icons.Avalonia;
 using Optris.Icons.Avalonia.FontAwesome;
+using Optris.Icons.Avalonia.FontAwesome7;
 using Optris.Icons.Avalonia.MaterialDesign;
 
 [assembly: SupportedOSPlatform("browser")]
@@ -21,6 +22,7 @@ internal sealed partial class Program
     {
         IconProvider.Current
             .Register<FontAwesomeIconProvider>()
+            .Register<FontAwesome7IconProvider>()
             .Register<MaterialDesignIconProvider>();
 
         return AppBuilder.Configure<App>();

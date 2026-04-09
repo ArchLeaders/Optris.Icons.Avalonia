@@ -1,6 +1,7 @@
 using Avalonia;
 using Optris.Icons.Avalonia;
 using Optris.Icons.Avalonia.FontAwesome;
+using Optris.Icons.Avalonia.FontAwesome7;
 using Optris.Icons.Avalonia.MaterialDesign;
 
 namespace Demo.Desktop;
@@ -18,6 +19,7 @@ internal static class Program
     {
         IconProvider.Current
             .Register<FontAwesomeIconProvider>()
+            .Register<FontAwesome7IconProvider>()
             .Register<MaterialDesignIconProvider>();
 
         return AppBuilder.Configure<App>()

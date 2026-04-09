@@ -42,13 +42,24 @@ namespace Optris.Icons.Avalonia.MaterialDesign
             using (TextReader textReader = new StreamReader(stream))
             {
                 var svg = textReader.ReadToEnd();
-                var viewBoxMath = _viewBoxRegex.Match(svg);
-                var viewBox = viewBoxMath.Groups[1].Value;
+
+                var viewBoxMatch = _viewBoxRegex.Match(svg);
+                if (!viewBoxMatch.Success)
+                {
+                    throw new KeyNotFoundException(
+                        $"Material Design Icon \"{value}\": SVG has no valid viewBox attribute.");
+                }
+
                 var pathMatch = _pathRegex.Match(svg);
-                var path = pathMatch.Groups[1].Value;
+                if (!pathMatch.Success)
+                {
+                    throw new KeyNotFoundException(
+                        $"Material Design Icon \"{value}\": SVG has no valid path element.");
+                }
+
                 return new IconModel(
-                    ViewBoxModel.Parse(viewBox),
-                    new PathModel(path));
+                    ViewBoxModel.Parse(viewBoxMatch.Groups[1].Value),
+                    new PathModel(pathMatch.Groups[1].Value));
             }
         }
 

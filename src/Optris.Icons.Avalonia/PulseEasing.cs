@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using System.Linq;
 using Avalonia.Animation.Easings;
 
@@ -8,14 +8,14 @@ namespace Optris.Icons.Avalonia
     {
         private const int Steps = 8;
 
-        private static readonly IEnumerable<double> _steps = Enumerable
+        private static readonly double[] _steps = Enumerable
             .Range(0, Steps + 1)
             .Select(index => 1.0 / Steps * index)
             .ToArray();
 
         public override double Ease(double progress)
         {
-            return _steps.Last(step => step <= progress);
+            return Array.FindLast(_steps, step => step <= progress);
         }
     }
 }

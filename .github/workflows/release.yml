@@ -11,8 +11,13 @@ defaults:
     working-directory: src
 
 jobs:
+  test:
+    name: 🧪 Test
+    uses: ./.github/workflows/call-test.yml
+
   release:
     name: 📦 Pack & Publish
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5

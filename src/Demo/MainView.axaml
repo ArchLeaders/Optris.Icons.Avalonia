@@ -46,7 +46,7 @@
 			</MenuItem>
 		</Menu>
 
-		<Grid RowDefinitions="Auto,Auto" ColumnDefinitions="Auto,Auto, Auto" Margin="4">
+		<Grid RowDefinitions="Auto,Auto" ColumnDefinitions="Auto,Auto,Auto,Auto" Margin="4">
 			<!--Font Awesome-->
 			<Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, Auto, Auto" Margin="4">
 				<TextBlock Text="FontAwesome" Grid.Row="0" Grid.ColumnSpan="2" Classes="h1" />
@@ -76,8 +76,37 @@
 				<Button i:Attached.Icon="fa-solid fa-circle-info" Grid.Row="4" Foreground="DodgerBlue" Classes="disableByStyle" />
 			</Grid>
 
-			<!--Material Design-->
+			<!--Font Awesome 7-->
 			<Grid Grid.Column="1" RowDefinitions="Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, Auto, Auto" Margin="32,4,4,4">
+				<TextBlock Text="FontAwesome 7" Grid.Row="0" Grid.ColumnSpan="2" Classes="h1" />
+
+				<!--github-->
+				<TextBlock Text="fa7-brands fa7-github" Grid.Row="1" />
+				<i:Icon Value="fa7-brands fa7-github" Grid.Row="1" Foreground="BlueViolet" />
+				<Button i:Attached.Icon="fa7-brands fa7-github" Grid.Row="1" Foreground="BlueViolet" Classes="disableByStyle" />
+
+				<!--solid address-card-->
+				<TextBlock Text="fa7-solid fa7-address-card" Grid.Row="2" />
+				<i:Icon Value="fa7-solid fa7-address-card" Grid.Row="2" />
+				<Button i:Attached.Icon="fa7-solid fa7-address-card" Grid.Row="2" Classes="disableByStyle" />
+
+				<!--regular address-card-->
+				<TextBlock Text="fa7-regular fa7-address-card" Grid.Row="3" />
+				<i:Icon Value="fa7-regular fa7-address-card" Grid.Row="3" />
+				<Button i:Attached.Icon="fa7-regular fa7-address-card" Grid.Row="3" Classes="disableByStyle" />
+
+				<!--info-->
+				<TextBlock Text="fa7-solid fa7(-circle)-info" Grid.Row="4" />
+				<Image Classes="icon" Grid.Row="4">
+					<Image.Source>
+						<i:IconImage Brush="DodgerBlue" Value="fa7-solid fa7-info" />
+					</Image.Source>
+				</Image>
+				<Button i:Attached.Icon="fa7-solid fa7-circle-info" Grid.Row="4" Foreground="DodgerBlue" Classes="disableByStyle" />
+			</Grid>
+
+			<!--Material Design-->
+			<Grid Grid.Column="2" RowDefinitions="Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, Auto, Auto" Margin="32,4,4,4">
 				<TextBlock Text="Material Design" Grid.Row="0" Grid.ColumnSpan="2" Classes="h1" />
 
 				<!--github-->
@@ -106,7 +135,7 @@
 			</Grid>
 
 			<!--Animations-->
-			<Grid Grid.Column="2" RowDefinitions="Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, Auto, Auto" Margin="32,4,4,4">
+			<Grid Grid.Column="3" RowDefinitions="Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, Auto, Auto" Margin="32,4,4,4">
 				<TextBlock Text="Animations" Grid.Row="0" Grid.ColumnSpan="2"  Classes="h1" />
 
 				<TextBlock Text="fa-spinner (Pulse)" Grid.Row="1" />

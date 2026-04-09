@@ -13,6 +13,7 @@ A library to easily display icons in an Avalonia App.
 
 [![🧪 Test](https://github.com/Optris/Optris.Icons.Avalonia/actions/workflows/push.yml/badge.svg)](https://github.com/Optris/Optris.Icons.Avalonia/actions/workflows/push.yml)
 [![🔄 Sync FontAwesome](https://github.com/Optris/Optris.Icons.Avalonia/actions/workflows/sync-fontawesome.yml/badge.svg)](https://github.com/Optris/Optris.Icons.Avalonia/actions/workflows/sync-fontawesome.yml)
+[![🔄 Sync FontAwesome 7](https://github.com/Optris/Optris.Icons.Avalonia/actions/workflows/sync-fontawesome7.yml/badge.svg)](https://github.com/Optris/Optris.Icons.Avalonia/actions/workflows/sync-fontawesome7.yml)
 [![🔄 Sync Material Design](https://github.com/Optris/Optris.Icons.Avalonia/actions/workflows/sync-materialdesign.yml/badge.svg)](https://github.com/Optris/Optris.Icons.Avalonia/actions/workflows/sync-materialdesign.yml)
 
 ## NuGet
@@ -21,6 +22,7 @@ A library to easily display icons in an Avalonia App.
 | :-------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------- | :--------------------------------------------------------------------------- |
 | [Optris.Icons.Avalonia](https://www.nuget.org/packages/Optris.Icons.Avalonia/)                                        | Core library                                                    | ![Nuget](https://badgen.net/nuget/v/Optris.Icons.Avalonia)                  |
 | [Optris.Icons.Avalonia.FontAwesome](https://www.nuget.org/packages/Optris.Icons.Avalonia.FontAwesome/)                | [Font Awesome 6 Free](https://fontawesome.com)                  | ![Nuget](https://badgen.net/nuget/v/Optris.Icons.Avalonia.FontAwesome)      |
+| [Optris.Icons.Avalonia.FontAwesome7](https://www.nuget.org/packages/Optris.Icons.Avalonia.FontAwesome7/)              | [Font Awesome 7 Free](https://fontawesome.com)                  | ![Nuget](https://badgen.net/nuget/v/Optris.Icons.Avalonia.FontAwesome7)     |
 | [Optris.Icons.Avalonia.MaterialDesign](https://www.nuget.org/packages/Optris.Icons.Avalonia.MaterialDesign/)          | [Material Design Icons](https://pictogrammers.com/library/mdi/) | ![Nuget](https://badgen.net/nuget/v/Optris.Icons.Avalonia.MaterialDesign)   |
 
 ## Installation
@@ -28,17 +30,19 @@ A library to easily display icons in an Avalonia App.
 ```bash
 dotnet add package Optris.Icons.Avalonia
 dotnet add package Optris.Icons.Avalonia.FontAwesome
+dotnet add package Optris.Icons.Avalonia.FontAwesome7
 dotnet add package Optris.Icons.Avalonia.MaterialDesign
 ```
 
-Install the core package and at least one icon provider. You only need the packs you plan to use.
+Install the core package and at least one icon provider. You only need the packs you plan to use. Font Awesome 6 and 7 can be used side-by-side.
 
 ## Icon providers
 
-| Name           | Prefix | Example      |
-| :------------- | :----: | :----------- |
-| FontAwesome 6  |  `fa`  | `fa-github`  |
-| MaterialDesign | `mdi`  | `mdi-github` |
+| Name           | Prefix | Example       |
+| :------------- | :----: | :------------ |
+| FontAwesome 6  |  `fa`  | `fa-github`   |
+| FontAwesome 7  | `fa7`  | `fa7-github`  |
+| MaterialDesign | `mdi`  | `mdi-github`  |
 
 ## Quick start
 
@@ -52,6 +56,7 @@ Register the icon provider(s) with the `IconProvider.Current`.
 using Avalonia;
 using Optris.Icons.Avalonia;
 using Optris.Icons.Avalonia.FontAwesome;
+using Optris.Icons.Avalonia.FontAwesome7;
 using Optris.Icons.Avalonia.MaterialDesign;
 
 namespace Demo.Desktop;
@@ -68,6 +73,7 @@ internal static class Program
     {
         IconProvider.Current
             .Register<FontAwesomeIconProvider>()
+            .Register<FontAwesome7IconProvider>()
             .Register<MaterialDesignIconProvider>();
 
         return AppBuilder.Configure<App>()

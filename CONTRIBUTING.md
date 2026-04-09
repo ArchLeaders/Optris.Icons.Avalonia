@@ -11,17 +11,19 @@ Thank you for your interest in contributing! This guide covers how to set up the
 
 ```
 src/
-  Optris.Icons.Avalonia/                  Core library
-  Optris.Icons.Avalonia.FontAwesome/      Font Awesome 6 Free icon provider
-  Optris.Icons.Avalonia.MaterialDesign/   Material Design icon provider
-  Optris.Icons.Avalonia.Test/             Core tests
-  Optris.Icons.Avalonia.FontAwesome.Test/ Font Awesome tests
-  Optris.Icons.Avalonia.MaterialDesign.Test/ Material Design tests
-  Demo/                                   Shared demo UI
-  Demo.Desktop/                           Desktop demo app
-  Demo.Browser/                           Browser/WASM demo app
+  Optris.Icons.Avalonia/                       Core library
+  Optris.Icons.Avalonia.FontAwesome/           Font Awesome 6 Free icon provider
+  Optris.Icons.Avalonia.FontAwesome7/          Font Awesome 7 Free icon provider
+  Optris.Icons.Avalonia.MaterialDesign/        Material Design icon provider
+  Optris.Icons.Avalonia.Test/                  Core tests
+  Optris.Icons.Avalonia.FontAwesome.Test/      Font Awesome 6 tests
+  Optris.Icons.Avalonia.FontAwesome7.Test/     Font Awesome 7 tests
+  Optris.Icons.Avalonia.MaterialDesign.Test/   Material Design tests
+  Demo/                                        Shared demo UI
+  Demo.Desktop/                                Desktop demo app
+  Demo.Browser/                                Browser/WASM demo app
 tools/
-  IconGenerator/                          Icon generation tooling
+  IconGenerator/                               Icon generation tooling
 ```
 
 ## Building
@@ -75,6 +77,7 @@ The [release workflow](.github/workflows/release.yml) extracts the version from 
 Font Awesome and Material Design icon sets are automatically kept up to date via scheduled GitHub Actions workflows:
 
 - [sync-fontawesome.yml](.github/workflows/sync-fontawesome.yml) syncs from the Font Awesome 6.x repository
+- [sync-fontawesome7.yml](.github/workflows/sync-fontawesome7.yml) syncs from the Font Awesome 7.x repository
 - [sync-materialdesign.yml](.github/workflows/sync-materialdesign.yml) syncs from the Material Design SVG repository
 
 Both workflows create pull requests automatically when icon changes are detected.

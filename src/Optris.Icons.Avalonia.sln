@@ -28,6 +28,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Browser", "Demo.Browse
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optris.Icons.Avalonia.FontAwesome7", "Optris.Icons.Avalonia.FontAwesome7\Optris.Icons.Avalonia.FontAwesome7.csproj", "{E112C791-C15A-487F-B32B-CD86D8B70AF4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optris.Icons.Avalonia.FontAwesome7.Test", "Optris.Icons.Avalonia.FontAwesome7.Test\Optris.Icons.Avalonia.FontAwesome7.Test.csproj", "{0BD765EB-0D1C-47F0-9332-687DB74B69CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -158,6 +160,18 @@ Global
 		{E112C791-C15A-487F-B32B-CD86D8B70AF4}.Release|x64.Build.0 = Release|Any CPU
 		{E112C791-C15A-487F-B32B-CD86D8B70AF4}.Release|x86.ActiveCfg = Release|Any CPU
 		{E112C791-C15A-487F-B32B-CD86D8B70AF4}.Release|x86.Build.0 = Release|Any CPU
+		{0BD765EB-0D1C-47F0-9332-687DB74B69CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BD765EB-0D1C-47F0-9332-687DB74B69CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BD765EB-0D1C-47F0-9332-687DB74B69CF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0BD765EB-0D1C-47F0-9332-687DB74B69CF}.Debug|x64.Build.0 = Debug|Any CPU
+		{0BD765EB-0D1C-47F0-9332-687DB74B69CF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0BD765EB-0D1C-47F0-9332-687DB74B69CF}.Debug|x86.Build.0 = Debug|Any CPU
+		{0BD765EB-0D1C-47F0-9332-687DB74B69CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BD765EB-0D1C-47F0-9332-687DB74B69CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BD765EB-0D1C-47F0-9332-687DB74B69CF}.Release|x64.ActiveCfg = Release|Any CPU
+		{0BD765EB-0D1C-47F0-9332-687DB74B69CF}.Release|x64.Build.0 = Release|Any CPU
+		{0BD765EB-0D1C-47F0-9332-687DB74B69CF}.Release|x86.ActiveCfg = Release|Any CPU
+		{0BD765EB-0D1C-47F0-9332-687DB74B69CF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

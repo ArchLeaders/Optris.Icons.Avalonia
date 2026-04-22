@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using FluentAssertions;
 using Optris.Icons.Avalonia.Models;
 using SkiaSharp;
@@ -20,7 +21,7 @@ public class MaterialDesignIconProviderTest
     {
         // Act
         var icon = _iconProvider.GetIcon($"mdi-{value}");
-        var skiaPath = SKPath.ParseSvgPathData(icon.Path);
+        var skiaPath = SKPath.ParseSvgPathData(icon.Path.Primary);
 
         // Assert
         skiaPath.Should().NotBeNull();

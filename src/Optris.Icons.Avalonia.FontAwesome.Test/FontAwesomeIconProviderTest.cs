@@ -25,7 +25,7 @@ public class FontAwesomeIconProviderTest
     {
         // Act
         var icon = _iconProvider.GetIcon(value);
-        var skiaPath = SKPath.ParseSvgPathData(icon.Path);
+        var skiaPath = SKPath.ParseSvgPathData(icon.Path.Primary);
 
         // Assert
         skiaPath.Should().NotBeNull();
@@ -469,7 +469,7 @@ public class FontAwesomeIconProviderTest
         // Assert
         icon.Should().NotBeNull();
 
-        icon.Path.ToString()
+        icon.Path.Primary
             .Should()
             .StartWith("M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6");
     }
@@ -499,7 +499,7 @@ public class FontAwesomeIconProviderTest
 
         // Assert
         icon.Should().NotBeNull();
-        icon.Path.ToString()
+        icon.Path.Primary
             .Should()
             .StartWith("M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6");
     }
@@ -524,7 +524,7 @@ public class FontAwesomeIconProviderTest
 
             // Assert
             icon.Should().NotBeNull();
-            icon.Path.ToString()
+            icon.Path.Primary
                 .Should()
                 .StartWith("M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6");
         }

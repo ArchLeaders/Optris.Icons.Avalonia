@@ -1,4 +1,7 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection.Metadata;
 using Avalonia;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
@@ -19,20 +22,31 @@ public class IconImage : DrawingImage, IImage
         IBrush
     >(nameof(Brush), new SolidColorBrush(Colors.Black));
 
+    public static readonly StyledProperty<IBrush?> SecondaryBrushProperty = AvaloniaProperty.Register<
+        IconImage,
+        IBrush?
+    >(nameof(SecondaryBrush));
+
     public static readonly StyledProperty<IPen> PenProperty = AvaloniaProperty.Register<
         IconImage,
         IPen
     >(nameof(Pen), new ImmutablePen(Colors.Black.ToUInt32(), 0));
+
+    public static readonly StyledProperty<IPen?> SecondaryPenProperty = AvaloniaProperty.Register<
+        IconImage,
+        IPen?
+    >(nameof(SecondaryPen));
 
     private Rect _bounds;
 
     public IconImage()
         : this(string.Empty, new SolidColorBrush(Colors.Black)) { }
 
-    public IconImage(string value, IBrush brush)
+    public IconImage(string value, IBrush brush, IBrush? secondaryBrush = null)
     {
         Value = value;
         Brush = brush;
+        SecondaryBrush = secondaryBrush;
     }
 
     public string Value
@@ -47,10 +61,22 @@ public class IconImage : DrawingImage, IImage
         set => SetValue(BrushProperty, value);
     }
 
+    public IBrush? SecondaryBrush
+    {
+        get => GetValue(SecondaryBrushProperty);
+        set => SetValue(SecondaryBrushProperty, value);
+    }
+
     public IPen Pen
     {
         get => GetValue(PenProperty);
         set => SetValue(PenProperty, value);
+    }
+
+    public IPen? SecondaryPen
+    {
+        get => GetValue(SecondaryPenProperty);
+        set => SetValue(SecondaryPenProperty, value);
     }
 
     /// <inheritdoc>
@@ -67,12 +93,12 @@ public class IconImage : DrawingImage, IImage
             HandleValueChanged();
             RaiseInvalidated(EventArgs.Empty);
         }
-        else if (change.Property == BrushProperty)
+        else if (change.Property == BrushProperty || change.Property == SecondaryBrushProperty)
         {
             HandleBrushChanged();
             RaiseInvalidated(EventArgs.Empty);
         }
-        else if (change.Property == PenProperty)
+        else if (change.Property == PenProperty || change.Property == SecondaryPenProperty)
         {
             HandlePenChanged();
             RaiseInvalidated(EventArgs.Empty);
@@ -90,25 +116,38 @@ public class IconImage : DrawingImage, IImage
             height: iconModel.ViewBox.Height
         );
 
-        var drawing = GetGeometryDrawing();
-        drawing.Geometry = StreamGeometry.Parse(iconModel.Path);
+        var (primary, secondary) = GetGeometryDrawings();
+        primary.Geometry = StreamGeometry.Parse(iconModel.Path.Primary);
+        secondary.Geometry = StreamGeometry.Parse(iconModel.Path.Secondary);
     }
 
     private void HandleBrushChanged()
     {
-        var drawing = GetGeometryDrawing();
-        drawing.Brush = Brush;
+        var (primary, secondary) = GetGeometryDrawings();
+        primary.Brush = Brush;
+        secondary.Brush = SecondaryBrush ?? Brush;
     }
 
     private void HandlePenChanged()
     {
-        var drawing = GetGeometryDrawing();
-        drawing.Pen = Pen;
+        var (primary, secondary) = GetGeometryDrawings();
+        primary.Pen = Pen;
+        secondary.Pen = SecondaryPen ?? Pen;
     }
 
-    private GeometryDrawing GetGeometryDrawing()
+    private (GeometryDrawing Primary, GeometryDrawing Secondary) GetGeometryDrawings()
     {
-        return (GeometryDrawing)(Drawing ??= new GeometryDrawing());
+        var drawing = (DrawingGroup)(Drawing ??= new DrawingGroup {
+            Children = {
+                new GeometryDrawing(),
+                new GeometryDrawing()
+            }
+        });
+
+        return (
+            Primary: (GeometryDrawing)drawing.Children[0],
+            Secondary: (GeometryDrawing)drawing.Children[1]
+        );
     }
 
     /// <inheritdoc/>

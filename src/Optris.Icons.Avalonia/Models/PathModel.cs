@@ -1,15 +1,6 @@
 namespace Optris.Icons.Avalonia.Models;
 
-public readonly record struct PathModel
+public readonly record struct PathModel(string Primary, string Secondary = null)
 {
-    private readonly string _path;
-
-    public PathModel(string path)
-    {
-        _path = path;
-    }
-
-    public static implicit operator string(PathModel path) => path._path;
-
-    public override string ToString() => _path;
+    public static implicit operator PathModel(string path) => new(path);
 }

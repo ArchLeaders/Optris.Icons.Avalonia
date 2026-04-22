@@ -17,6 +17,9 @@ public partial class Icon : TemplatedControl
     public static readonly StyledProperty<IconAnimation> AnimationProperty =
         AvaloniaProperty.Register<Icon, IconAnimation>(nameof(Animation));
 
+    internal static readonly StyledProperty<IBrush?> SecondaryForegroundProperty =
+        AvaloniaProperty.Register<Icon, IBrush?>(nameof(SecondaryForeground));
+
     internal static readonly StyledProperty<IconImage> ImageProperty =
         AvaloniaProperty.Register<Icon, IconImage>(nameof(Image));
 
@@ -40,6 +43,12 @@ public partial class Icon : TemplatedControl
         set => SetValue(AnimationProperty, value);
     }
 
+    public IBrush? SecondaryForeground
+    {
+        get => GetValue(SecondaryForegroundProperty);
+        set => SetValue(SecondaryForegroundProperty, value);
+    }
+
     internal IconImage Image
     {
         get => GetValue(ImageProperty);
@@ -52,7 +61,7 @@ public partial class Icon : TemplatedControl
         if (change.Property == ValueProperty || change.Property == ForegroundProperty)
         {
             // Create new IconImage so that Image.Draw is invoked
-            Image = new IconImage(Value, Foreground ?? _fallbackForeground);
+            Image = new IconImage(Value, Foreground ?? _fallbackForeground, SecondaryForeground);
         }
     }
 }

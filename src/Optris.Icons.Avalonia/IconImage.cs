@@ -125,7 +125,8 @@ public class IconImage : DrawingImage, IImage
     {
         var (primary, secondary) = GetGeometryDrawings();
         primary.Brush = Brush;
-        secondary.Brush = SecondaryBrush ?? Brush;
+        secondary.Brush = SecondaryBrush
+                          ?? new SolidColorBrush(((SolidColorBrush)Brush).Color, 0.4);
     }
 
     private void HandlePenChanged()
